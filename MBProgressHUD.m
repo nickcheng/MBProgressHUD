@@ -172,17 +172,17 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		self.labelText = nil;
 		self.detailsLabelText = nil;
 		self.opacity = 0.8f;
-		self.color = nil;
-		self.labelFont = [UIFont boldSystemFontOfSize:kLabelFontSize];
-		self.labelColor = [UIColor whiteColor];
-		self.detailsLabelFont = [UIFont boldSystemFontOfSize:kDetailsLabelFontSize];
-		self.detailsLabelColor = [UIColor whiteColor];
-		self.activityIndicatorColor = [UIColor whiteColor];
+		self.color = [UIColor colorWithWhite:1 alpha:.7f];
+		self.labelFont = [UIFont fontWithName:@"AvenirNext-Bold" size:kLabelFontSize];
+		self.labelColor = [UIColor colorWithRed:70.f/255.f green:70.f/255.f blue:70.f/255.f alpha:1];
+		self.detailsLabelFont = [UIFont fontWithName:@"AvenirNext-Bold" size:kDetailsLabelFontSize];
+		self.detailsLabelColor = [UIColor colorWithRed:70.f/255.f green:70.f/255.f blue:70.f/255.f alpha:1];
+		self.activityIndicatorColor = [UIColor colorWithRed:70.f/255.f green:70.f/255.f blue:70.f/255.f alpha:1];
 		self.xOffset = 0.0f;
 		self.yOffset = 0.0f;
 		self.dimBackground = NO;
 		self.margin = 20.0f;
-		self.cornerRadius = 10.0f;
+		self.cornerRadius = 3.0f;
 		self.graceTime = 0.0f;
 		self.minShowTime = 0.0f;
 		self.removeFromSuperViewOnHide = NO;
@@ -491,9 +491,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 			[(UIActivityIndicatorView *)indicator startAnimating];
 			[self addSubview:indicator];
 		}
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
 		[(UIActivityIndicatorView *)indicator setColor:self.activityIndicatorColor];
-#endif
 	}
 	else if (mode == MBProgressHUDModeDeterminateHorizontalBar) {
 		// Update to bar determinate indicator
