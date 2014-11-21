@@ -44,6 +44,7 @@
 		[self.buttons setValue:nil forKey:@"backgroundColor"];
 	}
 	((UIScrollView *)self.view).contentSize = content.bounds.size;
+	content.backgroundColor = [UIColor blackColor];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

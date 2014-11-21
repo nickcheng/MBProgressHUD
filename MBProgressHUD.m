@@ -788,8 +788,8 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		self.opaque = NO;
 		_progress = 0.f;
 		_annular = NO;
-		_progressTintColor = [[UIColor alloc] initWithWhite:1.f alpha:1.f];
-		_backgroundTintColor = [[UIColor alloc] initWithWhite:1.f alpha:.1f];
+		_progressTintColor = [[UIColor alloc] initWithRed:70.f/255.f green:70.f/255.f blue:70.f/255.f alpha:1];
+		_backgroundTintColor = [[UIColor alloc] initWithRed:70.f/255.f green:70.f/255.f blue:70.f/255.f alpha:1];
 		[self registerForKVO];
 	}
 	return self;
@@ -891,8 +891,8 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	self = [super initWithFrame:frame];
 	if (self) {
 		_progress = 0.f;
-		_lineColor = [UIColor whiteColor];
-		_progressColor = [UIColor whiteColor];
+		_lineColor = [[UIColor alloc] initWithRed:70.f/255.f green:70.f/255.f blue:70.f/255.f alpha:1];
+		_progressColor = [[UIColor alloc] initWithRed:70.f/255.f green:70.f/255.f blue:70.f/255.f alpha:1];
 		_progressRemainingColor = [UIColor clearColor];
 		self.backgroundColor = [UIColor clearColor];
 		self.opaque = NO;
